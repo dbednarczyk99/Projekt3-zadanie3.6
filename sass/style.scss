@@ -19,3 +19,111 @@ $background-color: #f0f8ff; // Alice Blue
 $background-secondary-color: #e0ffff; // Light Cyan
 $font-color: #333333; // Dark Gray
 
+/* GLOBAL */
+*, *::before, *::after {
+    box-sizing:border-box;
+}
+$transition: all 1s;
+body {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.7;
+    font-family: 'Signika', sans-serif;
+    color: $font-color
+}
+.container {
+    max-width: 1140px;
+    padding: 20px;
+}
+section {
+    padding: 0 96px;
+}
+
+/* NAVIGATION */
+.navigation {
+    
+    padding: 20px 0;
+    background-color: none;
+    .container {
+        max-width: 70%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    ul {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        li {
+            margin-right: 20px;
+            a {
+                text-decoration: none;
+                color: #ffffff;
+                font-weight: bold;
+                &:hover {
+                    color: $primary-color;
+                    transition: $transition;
+                }
+            }
+        }
+
+    }
+    .logo {
+        a {
+            text-decoration: none;
+            color: $primary-color;
+            font-family: 'Pacifico';
+            font-size: 2rem;
+            padding: 10px;
+            margin-right: 30px;
+            &:hover {
+                color: $secondary-color;
+                transition: $transition;
+            }
+        }
+    }
+}
+
+/* SPLASH */
+.splash {
+    height: 100vh;
+    position: relative;
+    background-image: url('https://i.postimg.cc/W10Lp73d/splash.png');
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: $primary-color;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: $transition;
+    &:hover {
+        background-color: $secondary-color;
+        transition: $transition;
+    }
+}
+.header .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #ffffff;
+    h1 {
+        font-size: 5rem;
+        margin-bottom: 20px;
+        font-weight: 400;
+        font-style: normal;
+    }
+    p {
+        font-size: 4rem;
+        margin-bottom: 20px;
+        font-family: 'Pacifico', cursive;
+    }
+}
