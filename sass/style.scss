@@ -15,7 +15,7 @@
 /* COLORS */
 $primary-color: #40e0d0; // turquise
 $secondary-color: #008080; // teal
-$background-color: #f0f8ff; // Alice Blue
+$background-color: #ffffff; // white
 $background-secondary-color: #e0ffff; // Light Cyan
 $font-color: #333333; // Dark Gray
 
@@ -32,17 +32,37 @@ body {
     color: $font-color
 }
 .container {
-    max-width: 1140px;
+    max-width: 70%;
+    margin: 0 auto;
     padding: 20px;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    
 }
 section {
-    padding: 0 96px;
+    padding: 60px 0;
+    
+
 }
-h2, h1, h3 {
+h2, h1, h3, p {
     margin: 0;
     padding: 0;
+}
+
+.section-title {
+    margin-bottom: 30px;
+    h2 {
+        font-size: 2.5rem;
+        margin-bottom: 0;
+        padding: 0;
+        text-align: center;
+        color: $font-color;
+    }
+    p {
+        font-size: 1rem;
+        margin: 0;
+        text-align: center;
+        color: $font-color;
+        font-family: 'Pacifico', cursive;
+    }
 }
 
 /* NAVIGATION */
@@ -51,7 +71,7 @@ h2, h1, h3 {
     padding: 20px 0;
     background-color: none;
     .container {
-        max-width: 70%;
+        //max-width: 70%;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -133,25 +153,10 @@ h2, h1, h3 {
         font-family: 'Pacifico', cursive;
     }
 }
-.services-content {
-    h2 {
-        font-size: 2.5rem;
-        margin-bottom: 0;
-        padding: 0;
-        text-align: center;
-        color: $font-color;
-    }
-    p {
-        font-size: 1rem;
-        margin-top: 0;
-        margin-bottom: 20px;
-        text-align: center;
-        color: $font-color;
-        font-family: 'Pacifico', cursive;
-    }
-}
+
+/* SERVICE */
+
 .service-item {
-    margin-top: 30px;
     i {
         display: flex;
         text-align: center;
@@ -171,5 +176,52 @@ h2, h1, h3 {
     P {
         text-align: center;
     }
-    
+
+}
+
+/* OUR PORTFOLIO */
+.portfolio {
+    background-color: $background-secondary-color;
+}
+.portfolio-item {
+    border-radius: 10px;
+}
+.portfolio-content {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: $background-color;
+    margin-bottom: 20px;
+    p {
+        margin: 0;
+    }
+}
+.card {
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+
+.portfolio-image {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.portfolio-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+/* MEDIA */
+@media (max-width: 768px) {
+    .container {
+        max-width: 90%;
+    }
 }
