@@ -68,7 +68,6 @@ h2, h1, h3, p {
 
 /* NAVIGATION */
 .navigation {
-    
     padding: 20px 0;
     background-color: none;
     .container {
@@ -84,27 +83,35 @@ h2, h1, h3, p {
         margin: 0;
         li {
             margin-right: 20px;
-            a {
-                text-decoration: none;
-                color: #ffffff;
-                font-weight: bold;
-                transition: $transition;
-                &:hover {
-                    color: $primary-color;
-                    transition: $transition;
-                }
-            }
+            list-style: none;
+            
         }
-
     }
+    a {
+        text-decoration: none;
+        color: #ffffff;
+        font-weight: bold;
+        transition: $transition;
+        &:hover {
+            color: $primary-color;
+            transition: $transition;
+        }
+    }
+
 }
+
+
+
+
+
+
 .logo {
     a {
         text-decoration: none;
         color: $primary-color;
         font-family: "Pacifico";
         font-size: 2rem;
-        padding: 10px;
+        //padding: 10px;
         margin-right: 10px;
         text-align: center;
         transition: $transition;
@@ -286,40 +293,10 @@ h2, h1, h3, p {
             font-family: 'Pacifico', cursive;
         }
     }
-    .navigation {
-    
-        padding: 20px 0;
-        background-color: none;
-        .container {
-            //max-width: 70%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        ul {
-            display: none;
-            position: absolute;
-            li {
-                margin-bottom: 10px;
-                margin-top: 10px;
-                display: flex;
-                a {
-                    text-decoration: none;
-                    color: #ffffff;
-                    font-weight: bold;
-                    transition: $transition;
-                    &:hover {
-                        color: $primary-color;
-                        transition: $transition;
-                    }
-                }
-            }
-        }
-        .logo:hover ul {
-            display: block;
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);   
-        }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .container {
+        max-width: 80%;
     }
 }
