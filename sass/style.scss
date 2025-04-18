@@ -93,16 +93,23 @@ h2, h1, h3, p {
         font-weight: bold;
         transition: $transition;
         &:hover {
-            color: $primary-color;
+            color: $secondary-color;
             transition: $transition;
         }
     }
-
+    .dropdown-menu {
+        font-size: 0;
+        i {
+            font-size: 30px;
+            color: $primary-color;
+            transition: $transition;
+            &:hover {
+                color: $secondary-color;
+                transition: $transition;
+            }
+        }
+    }
 }
-
-
-
-
 
 
 .logo {
